@@ -1,0 +1,35 @@
+{
+  "name": "spun-util",
+  "version": "0.0.1",
+  "description": "Utility functions for spun compilers.",
+  "author": "Joseph Spencer",
+  "scripts": {
+    "pretest": "jshint lib && jshint --config ./test/.jshintrc test",
+    "test": "istanbul cover _mocha && cat ./coverage/lcov.info | coveralls -v && rm -rf coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsdevel/spun-util.git"
+  },
+  "keywords": [],
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsdevel/spun-util/issues"
+  },
+  "devDependencies": {
+    "coveralls": "~2.10.0",
+    "should": "~4.0.4",
+    "mocha": "~1.20.1",
+    "jshint": "~2.5.1",
+    "istanbul": "~0.2.13",
+    "proxyquire": "~1.0.1",
+    "sinon": "~1.10.2",
+    "dir-to-exports": "*",
+    "chalk": "*"
+  },
+  "peerDependencies": {
+    "dir-to-exports": "*",
+    "chalk": "*"
+  }
+}
