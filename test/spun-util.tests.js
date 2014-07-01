@@ -50,6 +50,20 @@ describe('spun-util', function(){
       });
     });
 
+    describe('.command', function(){
+      it('should match commands with params', function(){
+        var results = regex.command.exec('foo asdf');
+        results[1].should.equal('foo');
+        results[2].should.equal('asdf');
+      });
+
+      it('should match commands without params', function(){
+        var results = regex.command.exec('foo');
+        results[1].should.equal('foo');
+        should(results[2]).not.be.ok;
+      });
+    });
+
     describe('.stringQuotes', function(){
       it('should match appropriately', function(){
         regex.stringQuotes.test('f"').should.be.true;
