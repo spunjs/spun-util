@@ -56,6 +56,21 @@ describe('spun-util', function(){
         regex.stringQuotes.test('"f').should.be.false;
       });
     });
+
+    describe('.emptyLines', function(){
+      it('should match empty lines and comments', function(){
+        [
+          '     ',
+          '#asdf',
+          'foo',
+          '   #asdfasdf',
+          'boo',
+          ''
+        ].join('\n')
+        .replace(regex.emptyLines, '')
+        .should.equal('foo\nboo\n');
+      });
+    });
   });
 
   describe('cli', function(){
