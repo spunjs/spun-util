@@ -49,15 +49,13 @@ describe('spun-util', function(){
     describe('.emptyLines', function(){
       it('should match empty lines and comments', function(){
         [
-          '     ',
+          '   ',
           '#asdf',
-          'foo',
           '   #asdfasdf',
-          'boo',
           ''
-        ].join('\n')
-        .replace(regex.emptyLines, '')
-        .should.equal('foo\nboo\n');
+        ].forEach(function(line){
+          line.replace(regex.emptyLines, '').should.equal('');
+        });
       });
     });
   });
