@@ -73,6 +73,12 @@ describe('spun-util', function(){
       });
     });
 
+    describe('praise', function(){
+      it('should praise to console', function(){
+        cli.praise('praise');
+      });
+    });
+
     describe('warn', function(){
       it('should warn to console', function(){
         cli.warn('warning');
