@@ -16,15 +16,6 @@ describe('spun-util', function(){
       });
     });
 
-    describe('.assignment', function(){
-      it('should match appropriately', function(){
-        regex.assignment.exec('f="asdf"')[1].should.equal('f');
-        regex.assignment.exec('f="asdf"')[2].should.equal('asdf');
-        regex.assignment.test('f=\'asdf\'').should.be.false;
-        regex.assignment.test('f=asdf').should.be.false;
-      });
-    });
-
     describe('.command', function(){
       it('should match commands with params', function(){
         var results = regex.command.exec('foo asdf');
@@ -56,6 +47,12 @@ describe('spun-util', function(){
         ].forEach(function(line){
           line.replace(regex.emptyLines, '').should.equal('');
         });
+      });
+    });
+
+    describe('.variableName', function(){
+      it('should match camelCase', function(){
+        regex.variableName.test('asdfAsdf2asdf').should.be.true;
       });
     });
   });
