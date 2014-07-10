@@ -88,23 +88,4 @@ describe('spun-util', function(){
       });
     });
   });
-
-  describe('errors', function(){
-    var errors = sUtil.errors;
-
-    Object.keys(errors.compiling).forEach(function(error){
-      describe('.' + error, function(){
-        it('should have error properties when thrown ' + error, function(){
-          var line = {number: 5, text: 'asdf'};
-          try {
-            throw new errors.compiling[error](line, error);
-          } catch(e) {
-            e.message.should.be.type('string');
-            e.stack.should.be.an.instanceOf(Object);
-            e.should.be.an.instanceOf(errors.compiling[error]);
-          }
-        });
-      });
-    });
-  });
 });
