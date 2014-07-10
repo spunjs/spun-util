@@ -42,8 +42,8 @@ THE SOFTWARE.
 [npm-url]: https://npmjs.org/package/spun-util
 [npm-image]: http://img.shields.io/npm/v/spun-util.svg
 
-[travis-url]: https://travis-ci.org/jsdevel/spun-util
-[travis-image]: http://img.shields.io/travis/jsdevel/spun-util.svg
+[travis-url]: https://travis-ci.org/spunjs/spun-util
+[travis-image]: http://img.shields.io/travis/spunjs/spun-util.svg
 
-[coveralls-url]: https://coveralls.io/r/jsdevel/spun-util
-[coveralls-image]: http://img.shields.io/coveralls/jsdevel/spun-util/master.svg
+[coveralls-url]: https://coveralls.io/r/spunjs/spun-util
+[coveralls-image]: http://img.shields.io/coveralls/spunjs/spun-util/master.svg
