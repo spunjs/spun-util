@@ -8,7 +8,9 @@ describe('errors', function(){
   [
     'CompileError',
     'ParseError',
+    'ReadError',
     'SpunError',
+    'TokenizeError',
     'ValidationError'
   ].forEach(function(constructor){
     it(f('should expose a %s constructor and be an instance of SpunError', constructor), function(){
